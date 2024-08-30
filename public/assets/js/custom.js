@@ -188,15 +188,25 @@
 })(window.jQuery);
 
 /** For Currency Code */
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle currency selection
+    document.querySelectorAll('.header-currency .dropdown-content a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const selectedCurrency = this.getAttribute('data-value');
+            const symbol = this.getAttribute('data-symbol');
+            document.querySelector('.header-currency .dropbtn').textContent = this.textContent;
+        });
+    });
 
-document.querySelectorAll('.dropdown-content a').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const selectedCurrency = this.getAttribute('data-value');
-        document.querySelector('.dropbtn').textContent = this.textContent;
-        console.log('Selected currency:', selectedCurrency);
+    // Handle language selection
+    document.querySelectorAll('.header-language .dropdown-content a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const selectedLanguageCode = this.getAttribute('data-code');
+            const selectedLanguageName = this.getAttribute('data-name');
+            document.querySelector('.header-language .dropbtn').textContent = selectedLanguageName;
+        });
     });
 });
-
-
 

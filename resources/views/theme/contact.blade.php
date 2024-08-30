@@ -80,6 +80,32 @@ https://templatemo.com/tm-571-hexashop
                                 </ul>
                             </li>
                             <li class="scroll-to-section"><a href="{{ asset('theme')}}">Explore</a></li>
+
+                            <ul class="header-currency">
+                                <li class="dropdown">
+                                    <button class="dropbtn"><img src="assets/images/currency.png" alt="" width="40px" height="30px"></button>                                    <div class="dropdown-content">
+                                        @foreach($currencies as $currency)
+                                            <a href="#" data-value="{{ $currency->code }}" data-symbol="{{ $currency->symbol }}">
+                                                {{ $currency->code }}
+                                            </a>
+                                        @endforeach
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="header-language">
+                                <li class="dropdown">
+                                    <button class="dropbtn">Select Language</button>
+                                    <div class="dropdown-content">
+                                        @foreach($languages as $language)
+                                            <a href="#" data-code="{{ $language->code }}" data-name="{{ $language->name }}">
+                                                {{ $language->name }}
+                                            </a>
+                                        @endforeach
+                                    </div>
+                                </li>
+                            </ul>
+                            
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -252,10 +278,10 @@ https://templatemo.com/tm-571-hexashop
                         
                         <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://x.com/"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.behance.net/"><i class="fa fa-behance"></i></a></li>
                         </ul>
                     </div>
                 </div>

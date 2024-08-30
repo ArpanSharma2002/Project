@@ -2337,16 +2337,14 @@
 }
 
 /* For Currency Dropdown */
-
+/* General Dropdown Styles */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
 .dropbtn {
-  background-color: #f9f9f9;
-  color: black;
-  padding: 10px;
+  padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -2368,12 +2366,34 @@
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
-.dropdown:hover .dropdown-content {
+/* Currency Dropdown Styles */
+.header-currency .dropbtn {
+  background-color: #f5f5f5;
+  color: rgb(12, 1, 1);
+}
+
+.header-currency .dropdown:hover .dropbtn {
+  background-color: #ffffff;
+}
+
+.header-currency .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #ddd;
+/* Language Dropdown Styles */
+.header-language .dropbtn {
+  background-color: #f5f5f5;
+  color: rgb(12, 1, 1);
+}
+
+.header-language .dropdown:hover .dropbtn {
+  background-color: #ffffff;
+}
+
+.header-language .dropdown:hover .dropdown-content {
+  display: block;
 }
