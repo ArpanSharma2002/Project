@@ -1,7 +1,7 @@
 <div class="container">
-    <h1>Contact Us</h1>
+    <h1 style="text-align: center">Contact Us</h1>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-12">
             <form method="POST" action="{{ route('theme.index') }}">
                 @csrf
 
@@ -12,7 +12,7 @@
                         <div class="invalid-feedback" style="color: red;">{{ $message }}</div>
                     @enderror
                 </div>
-
+ 
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}">

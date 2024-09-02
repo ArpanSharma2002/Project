@@ -44,8 +44,10 @@ https://templatemo.com/tm-571-hexashop
     <!-- ***** Included  End ***** -->
     @include('theme.header')
     @include('theme.main')
+    @include('theme.banner')
+    @include('theme.content')
     @include('theme.contactus')
-    @include('theme.footer');
+    @include('theme.footer')
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>

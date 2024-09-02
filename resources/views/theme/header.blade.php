@@ -38,7 +38,7 @@
                        
                         <ul class="header-currency">
                             <li class="dropdown">
-                                <button class="dropbtn"><img src="assets/images/currency.png" alt="" width="40px" height="30px"></button>
+                                <button class="dropbtn"><img src="assets/images/currency.png" alt="" width="40px" height="25px"></button>
                                 <div class="dropdown-content">
                                     @foreach($currencies as $currency)
                                         <a href="#" data-value="{{ $currency->code }}" data-symbol="{{ $currency->symbol }}">
@@ -55,7 +55,7 @@
                                 <div class="dropdown-content">
                                     @foreach($languages as $language)
                                         <a href="#" data-code="{{ $language->code }}" data-name="{{ $language->name }}">
-                                            {{ $language->name }}
+                                            {{ $language->name }}   
                                         </a>
                                     @endforeach
                                 </div>
