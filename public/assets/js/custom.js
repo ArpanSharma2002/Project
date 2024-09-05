@@ -207,3 +207,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+$(document).ready(function() {
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+ 
+        $.ajax({
+            url: $(this).attr('action'),
+            method: 'POST',
+            data: $(this).serialize(),
+            success: function(response) {
+                alert('Form submitted successfully!');
+            },
+            error: function(xhr) {
+                var errors = xhr.responseJSON.errors;
+                $('.invalid-feedback').empty();
+                $('.form-control').removeClass('is-invalid');
+ 
+                $.each(errors, function(key, value) {
+                    $('#' + key + '-error').text(value[0]);
+                    $('#' + key).addClass('is-invalid');
+                });
+            }
+        });
+    });
+});
