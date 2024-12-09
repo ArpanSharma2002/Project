@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1> Test Git funcionality and commands </h1>
+    <p>Paragraph for git</p>
 </body>
 </html>
